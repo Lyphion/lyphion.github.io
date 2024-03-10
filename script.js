@@ -69,8 +69,7 @@ function init() {
 
     const quote = document.getElementById("quote");
     const quotes = JSON.parse(quote.dataset.quotes);
-
-    quote.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    quote.removeAttribute("data-quotes");
 
     setInterval(() => {
         quote.innerText = quotes[Math.floor(Math.random() * quotes.length)];
